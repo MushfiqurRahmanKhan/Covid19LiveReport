@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+   <LinearLayout
+       android:orientation="vertical"
+       android:gravity="center"
+       android:background="@drawable/pic1"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       tools:context="com.example.covid19livereport.Covid19Fragment">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:layout_gravity="center_vertical">
+
+           <ImageView
+               android:layout_width="200dp"
+               android:layout_height="120dp"
+               android:id="@+id/flagTV"
+               android:layout_margin="10dp"
+               android:layout_gravity="center"
+               android:src="@drawable/ic_baseline_image_24"/>
+
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:layout_gravity="center_vertical">
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/countryTV"
+                   android:layout_gravity="center"
+                   android:textSize="30sp"
+                   android:textColor="@color/black"
+                   android:textStyle="bold"
+                   android:text="Bangladesh"/>
+
+               <TextView
+                   android:id="@+id/updateTimeTV"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center"
+                   android:textSize="20sp"
+                   android:textColor="@color/black"
+                   android:text="Date" />
+
+           </LinearLayout>
+
+
+       </LinearLayout>
+
+       <ScrollView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+           <androidx.cardview.widget.CardView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_margin="5dp"
+               app:cardElevation="10dp"
+               app:cardCornerRadius="8dp"
+               app:contentPadding="6dp">
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:orientation="vertical">
+
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_margin="5dp"
+                       android:layout_gravity="center_horizontal"
+                       android:textSize="20sp"
+                       android:textColor="@color/black"
+                       android:text="Case Today"/>
+                   <TextView
+                       android:textColor="@color/black"
+                       android:layout_margin="15dp"
+                       android:id="@+id/caseTodayTV"
+                       android:layout_gravity="center_horizontal"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:textSize="20sp"
+                       android:text="0" />
+                   <TextView
+                       android:layout_margin="5dp"
+                       android:layout_gravity="center_horizontal"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:textSize="20sp"
+                       android:textColor="@color/black"
+                       android:text="Total Cases" />
+                   <TextView
+                       android:textColor="@color/black"
+                       android:layout_margin="15dp"
+                       android:id="@+id/totalcaseTV"
+                       android:layout_gravity="center_horizontal"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:textSize="20sp"
+                       android:text="0" />
+
+                   <TextView
+                       android:layout_margin="5dp"
+                       android:layout_gravity="center_horizontal"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:textSize="20sp"
+                       android:textColor="@color/black"
+                       android:text="Death Today" />
+                   <TextView
+                       android:textColor="#C62828"
+                       android:layout_margin="15dp"
+                       android:id="@+id/deathTodayTV"
+                       android:layout_gravity="center_horizontal"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:textSize="20sp"
+                       android:text="0" />
+                   <TextView
+                       android:layout_margin="5dp"
+                       android:layout_gravity="center_horizontal"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:textSize="20sp"
+                       android:textColor="@color/black"
+                       android:text="Total Death" />
+                   <TextView
+                       android:textColor="#C62828"
+                       android:layout_margin="15dp"
+                       android:id="@+id/totaldeathTV"
+                       android:text="0"
+                       android:layout_gravity="center_horizontal"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:textSize="20sp" />
+                   <TextView
+                       android:layout_margin="5dp"
+                       android:layout_gravity="center_horizontal"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:textSize="20sp"
+                       android:textColor="@color/black"
+                       android:text="Recover Today" />
+                   <TextView
+                       android:textColor="#2E7D32"
+                       android:layout_margin="15dp"
+                       android:id="@+id/recoverTodayTV"
+                       android:layout_gravity="center_horizontal"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:textSize="20sp"
+                       android:text="0" />
+                   <TextView
+                       android:layout_margin="5dp"
+                       android:layout_gravity="center_horizontal"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:textSize="20sp"
+                       android:textColor="@color/black"
+                       android:text="Total Recovered" />
+                   <TextView
+                       android:textColor="#2E7D32"
+                       android:layout_margin="15dp"
+                       android:id="@+id/totalrecoverTodayTV"
+                       android:layout_gravity="center_horizontal"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:textSize="20sp"
+                       android:text="0" />
+
+
+               </LinearLayout>
+
+           </androidx.cardview.widget.CardView>
+
+
+       </ScrollView>
+
+
+   </LinearLayout>
+
+</layout>
+
